@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="project-title">INTEL 8086 PROCESSOR - SIMULATOR</h1>
+
+      <main class="project">
+        <section class="section1">
+          <div class="section1_buttons">
+            <button class="section1_buttons_resetBtn">RESET</button>
+            <button class="section1_buttons_randomBtn">RANDOM</button>
+          </div>
+
+          <div class="section1_inputs">
+            <div class="section1_inputsOnChange">
+              <span>AX</span
+              ><input class="section1_inputsOnChange_AX" type="text" />
+              <span
+                >BX<input class="section1_inputsOnChange_BX" type="text"
+              /></span>
+              <span
+                >CX<input class="section1_inputsOnChange_CX" type="text"
+              /></span>
+              <span
+                >DX<input class="section1_inputsOnChange_DX" type="text"
+              /></span>
+            </div>
+
+            <div class="section1_inputsReadOnly">
+              <input class="section1_inputsReadOnly_AX" type="text" readonly />
+              <input class="section1_inputsReadOnly_BX" type="text" readonly />
+              <input class="section1_inputsReadOnly_CX" type="text" readonly />
+              <input class="section1_inputsReadOnly_DX" type="text" readonly />
+            </div>
+          </div>
+
+          <div class="section1_btnOrders">
+            <div class="section1_buttonsMOV">
+              <button type="btnMOV" class="section1_buttonsMOV_AX-BX">MOV AX, BX</button>
+              <button type="btnMOV" class="section1_buttonsMOV_AX-CX">MOV AX, CX</button>
+              <button type="btnMOV" class="section1_buttonsMOV_AX-DX">MOV AX, DX</button>
+              <button type="btnMOV" class="section1_buttonsMOV_BX-AX">MOV BX, AX</button>
+              <button type="btnMOV" class="section1_buttonsMOV_BX-CX">MOV BX, CX</button>
+              <button type="btnMOV" class="section1_buttonsMOV_BX-DX">MOV BX, DX</button>
+              <button type="btnMOV" class="section1_buttonsMOV_CX-AX">MOV CX, AX</button>
+              <button type="btnMOV" class="section1_buttonsMOV_CX-BX">MOV CX, BX</button>
+              <button type="btnMOV" class="section1_buttonsMOV_CX-DX">MOV CX, DX</button>
+              <button type="btnMOV" class="section1_buttonsMOV_DX-AX">MOV DX, AX</button>
+              <button type="btnMOV" class="section1_buttonsMOV_DX-BX">MOV DX, BX</button>
+              <button type="btnMOV" class="section1_buttonsMOV_DX-CX">MOV DX, CX</button>
+            </div>
+
+            <div class="section1_buttonsXCHG">
+              <button type="btnXCHG" class="section1_buttonsXCHG_AX-BX">XCHG AX, BX</button>
+              <button type="btnXCHG" class="section1_buttonsXCHG_AX-CX">XCHG AX, CX</button>
+              <button type="btnXCHG" class="section1_buttonsXCHG_AX-DX">XCHG AX, DX</button>
+              <button type="btnXCHG" class="section1_buttonsXCHG_BX-AX">XCHG BX, AX</button>
+              <button type="btnXCHG" class="section1_buttonsXCHG_BX-CX">XCHG BX, CX</button>
+              <button type="btnXCHG" class="section1_buttonsXCHG_BX-DX">XCHG BX, DX</button>
+              <button type="btnXCHG" class="section1_buttonsXCHG_CX-AX">XCHG CX, AX</button>
+              <button type="btnXCHG" class="section1_buttonsXCHG_CX-BX">XCHG CX, BX</button>
+              <button type="btnXCHG" class="section1_buttonsXCHG_CX-DX">XCHG CX, DX</button>
+              <button type="btnXCHG" class="section1_buttonsXCHG_DX-AX">XCHG DX, AX</button>
+              <button type="btnXCHG" class="section1_buttonsXCHG_DX-BX">XCHG DX, BX</button>
+              <button type="btnXCHG" class="section1_buttonsXCHG_DX-CX">XCHG DX, CX</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section2">
+          <div class="section2_sendingOrder">
+            <label><input type="radio" />Z rejestru do pamięci</label>
+            <label><input type="radio" />Z pamięci do rejestru</label
+          </div>
+
+          <div class="section2_adressingModes">
+            <label><input class="section2_adressingModes_index" type="radio" />Indeksowy</label>           
+            <label><input class="section2_adressingModes_base" type="radio" />Bazowy</label>
+            <label><input
+              class="section2_adressingModes_index-base"
+              type="radio"
+            />Indeksowo-bazowy</label>
+          </div>
+
+          <div class="section2_registers">
+            <div class="section2_registers-1">
+              <label><input class="section2_registers-1_SI" type="radio" />SI</label>
+
+              <label><input class="section2_registers-1_DI" type="radio" />DI</label>
+              
+              <label><input class="section2_registers-1_BX" type="radio" />BX</label>
+    
+              <label><input class="section2_registers-1_BP" type="radio" />BP</label>
+
+            </div>
+
+            <div class="section2_registers-2">
+              <label><input class="section2_registers-2_AX" type="radio" />AX</label>
+              
+              <label><input class="section2_registers-2_BX" type="radio" />BX</label>
+              
+              <label><input class="section2_registers-2_CX" type="radio" />CX</label>
+
+              <label><input class="section2_registers-2_DX" type="radio" />DX</label>
+            </div>
+
+          </div>
+
+            <div class="section2_registers-3">
+              <label><input class="section2_registers-3_SI-BX" type="radio" />SI i BX</label>
+
+              <label><input class="section2_registers-3_DI-BX" type="radio" />DI i BX</label>
+
+              <label><input class="section2_registers-3_SI-BP" type="radio" />SI i BP</label>
+            
+              <label><input class="section2_registers-3_DI-BP" type="radio" />DI i BP</label>
+            </div>
+        </section>
+
+        <section class="section3">
+
+        <div class="section3_button">
+          <button class="section3_button_resetBtn">RESET</button>
+        </div>
+
+        <div class="section3_inputs">
+          <div class="section3_inputsOnChange">
+            <label class="section3_label">SI<input class="section3_inputsOnChange_SI" type="text"/></label>
+            <label class="section3_label">DI<input class="section3_inputsOnChange_DI" type="text"/></label>
+            <label class="section3_label">BP<input class="section3_inputsOnChange_BP" type="text"/></label>
+            <label class="section3_label">SP<input class="section3_inputsOnChange_SP" type="text"/></label>
+          </div>
+
+          <div class="section3_inputsReadOnly">
+            <input class="section3_inputsReadOnly_SI" type="text" readonly />
+            <input class="section3_inputsReadOnly_DI" type="text" readonly />
+            <input class="section3_inputsReadOnly_BP" type="text" readonly />
+            <input class="section3_inputsReadOnly_SP" type="text" readonly />
+          </div>
+        </div>
+
+          <div class="section3_displayAndPushPop">
+            <h1 class="section3_title">Display</h1>
+            <div class="section3_display">
+
+              <input class="section3_display_inputOnChange" type="text" />
+              <input
+                class="section3_display_inputReadOnly"
+                type="text"
+                readonly
+              />
+            </div>
+
+            <div class="section3_buttons">
+              <button class="section3_buttons_MOVBtn">MOV</button>
+              <button class="section3_buttons_XCHGBtn">XCHG</button>
+            </div>
+
+            <div class="section3_orders">
+              <div class="section3_orders_push">
+                <button type="btnPUSH" class="section3_orders_push-AX">PUSH AX</button>
+                <button type="btnPUSH" class="section3_orders_push-BX">PUSH BX</button>
+                <button type="btnPUSH" class="section3_orders_push-CX">PUSH CX</button>
+                <button type="btnPUSH" class="section3_orders_push-DX">PUSH DX</button>
+              </div>
+              <div class="section3_orders_pop">
+                <button type="btnPOP" class="section3_orders_pop-AX">POP AX</button>
+                <button type="btnPOP" class="section3_orders_pop-BX">POP BX</button>
+                <button type="btnPOP" class="section3_orders_pop-CX">POP CX</button>
+                <button type="btnPOP" class="section3_orders_pop-DX">POP DX</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

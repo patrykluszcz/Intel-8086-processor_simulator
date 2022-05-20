@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ecf0f3;
+}
+
+input {
+  margin: 7px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+button {
+  margin: 5px;
+  padding: 1px;
+}
+
+label {
+  /* font-family: system-ui, sans-serif; */
+  font-size: 20px;
+  line-height: 2;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 45px auto;
+}
+
+input[type="radio"] {
+  position: relative;
+  appearance: none;
+  margin: 6px 10px 6px 0;
+  font: inherit;
+  color: currentColor;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: -6px -4px 6px 0px #ffffff, 8px 4px 12px 0px #bcc3cf;
+  cursor: pointer;
+}
+
+input[type="radio"]::before,
+input[type="radio"]::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+}
+
+input[type="radio"]::before {
+  box-shadow: -4px -2px 4px 0px #c9d0db, 4px 2px 8px 0px #fff;
+}
+
+input[type="radio"]::after {
+  background-color: #ecf0f3;
+  box-shadow: -4px -2px 4px 0px #fff, 4px 2px 8px 0px #bdc4cf;
+  transform: scale3d(1, 1, 1);
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+input[type="radio"]:checked::after {
+  transform: scale3d(0.975, 0.975, 1) translate3d(0, 10%, 0);
+  opacity: 0;
+}
+
+button[type="btnMOV"],
+button[type="btnXCHG"],
+button[type="btnPUSH"],
+button[type="btnPOP"] {
+  border: none;
+  margin: 6px;
+  background-color: #ecf0f3;
+  border-radius: 50px;
+  padding: 4px 5px 4px 5px;
+  color: black;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6),
+    -2px -2px 4px rgba(255, 255, 255, 0.4),
+    2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+button[type="btnMOV"]:active,
+button[type="btnXCHG"]:active,
+button[type="btnPUSH"]:active,
+button[type="btnPOP"]:active {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.7),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 2px rgba(255, 255, 255, 0.075),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 87vh;
+  width: 80vw;
+  padding: 50px;
+  border-radius: 50px;
+  background-color: #ecf0f3;
+  box-shadow: 10px 10px 10px 0px #d1d9e6 inset,
+    -10px -10px 10px 0px #ffffff inset;
+}
+
+.project {
+  display: flex;
+}
+
+.project-title {
+  text-align: center;
+  color: purple;
+  padding-bottom: 30px;
+}
+
+.section1,
+.section2,
+.section3 {
+  /* border: 1px solid black; */
+  height: 70vh;
+  width: 70vw;
+  padding: 10px;
+}
+
+/************** SECTION 1 ********************/
+
+.section1_buttons {
+  display: flex;
+  padding: 0 10px 10px 10px;
+  justify-content: center;
+}
+
+.section1_buttons_resetBtn,
+.section1_buttons_randomBtn {
+  padding: 15px 25px 15px 25px;
+  border: none;
+  /* font-weight: bold; */
+  border-radius: 2rem;
+  background: #ecf0f3;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7),
+    -6px -6px 10px rgba(255, 255, 255, 0.5),
+    6px 6px 8px rgba(255, 255, 255, 0.075), 6px 6px 10px rgba(0, 0, 0, 0.15);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.section1_buttons_resetBtn:hover,
+.section1_buttons_randomBtn:hover {
+  color: purple;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6),
+    -2px -2px 4px rgba(255, 255, 255, 0.4),
+    2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section1_buttons_randomBtn {
+  margin-left: 25px;
+}
+
+.section1_buttons_resetBtn {
+  margin-right: 25px;
+}
+
+.section1_inputs {
+  display: flex;
+}
+
+.section1_btnOrders {
+  display: flex;
+  justify-content: center;
+}
+
+.section1_buttonsMOV,
+.section1_buttonsXCHG {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  margin: 20px 40px 20px 40px;
+}
+
+/************* SECTION 2 ******************/
+
+.section2_sendingOrder {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-left: 120px;
+  font-size: 20px;
+}
+
+.section2_adressingModes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.section2_registers {
+  display: flex;
+  margin-top: 40px;
+}
+
+.section2_registers-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.section2_registers-2 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.section2_registers-3 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+/**************** SECTION 3 ***************/
+
+.section3_button {
+  display: flex;
+  justify-content: center;
+  padding: 0 10px 10px 10px;
+}
+
+.section3_button_resetBtn {
+  padding: 15px 25px 15px 25px;
+  border: none;
+  /* font-weight: bold; */
+  border-radius: 2rem;
+  background: #ecf0f3;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7),
+    -6px -6px 10px rgba(255, 255, 255, 0.5),
+    6px 6px 8px rgba(255, 255, 255, 0.075), 6px 6px 10px rgba(0, 0, 0, 0.15);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.section3_button_resetBtn:hover {
+  color: purple;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6),
+    -2px -2px 4px rgba(255, 255, 255, 0.4),
+    2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section3_inputs {
+  display: flex;
+}
+
+.section3_inputsOnChange {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.section3_label {
+  font-size: 20px;
+  line-height: 2;
+  display: grid;
+  grid-template-columns: 15px auto;
+  transform: translateY(0, 100px);
+}
+
+.section3_displayAndPushPop {
+  margin-top: 40px;
+}
+
+.section3_title {
+  text-align: center;
+  color: purple;
+}
+
+.section3_display {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.section3_buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.section3_buttons_MOVBtn,
+.section3_buttons_XCHGBtn {
+  padding: 15px 25px 15px 25px;
+  border: none;
+  /* font-weight: bold; */
+  border-radius: 2rem;
+  background: #ecf0f3;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7),
+    -6px -6px 10px rgba(255, 255, 255, 0.5),
+    6px 6px 8px rgba(255, 255, 255, 0.075), 6px 6px 10px rgba(0, 0, 0, 0.15);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.section3_buttons_MOVBtn:hover,
+.section3_buttons_XCHGBtn:hover {
+  color: purple;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6),
+    -2px -2px 4px rgba(255, 255, 255, 0.4),
+    2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section3_buttons_MOVBtn {
+  margin-right: 15px;
+}
+
+.section3_buttons_XCHGBtn {
+  margin-left: 15px;
+}
+
+.section3_orders {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.section3_orders_push,
+.section3_orders_pop {
+  display: flex;
+  flex-direction: column;
+}
+
+.section3_orders_push {
+  margin-right: 35px;
+  margin-left: 25px;
+}

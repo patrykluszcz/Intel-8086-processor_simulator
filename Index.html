@@ -17,60 +17,62 @@
             <button class="section1_buttons_randomBtn">RANDOM</button>
           </div>
 
+        <div class="section1_titles">
+          <h1 class="section1_title_input">INPUT</h1>
+          <h1 class="section1_title_output">OUTPUT</h1>
+        </div>
+
           <div class="section1_inputs">
             <div class="section1_inputsOnChange">
               <span>AX</span
-              ><input class="section1_inputsOnChange_AX" type="text" />
+              ><input class="section1_input" name="ax" type="text" value="0000" maxlength="4" />
               <span
-                >BX<input class="section1_inputsOnChange_BX" type="text"
+                >BX<input class="section1_input" name="bx" type="text" value="0000" maxlength="4"
               /></span>
               <span
-                >CX<input class="section1_inputsOnChange_CX" type="text"
+                >CX<input class="section1_input" name="cx" type="text" value="0000" maxlength="4"
               /></span>
               <span
-                >DX<input class="section1_inputsOnChange_DX" type="text"
+                >DX<input class="section1_input" name="dx" type="text" value="0000" maxlength="4"
               /></span>
             </div>
 
             <div class="section1_inputsReadOnly">
-              <input class="section1_inputsReadOnly_AX" type="text" readonly />
-              <input class="section1_inputsReadOnly_BX" type="text" readonly />
-              <input class="section1_inputsReadOnly_CX" type="text" readonly />
-              <input class="section1_inputsReadOnly_DX" type="text" readonly />
+              <input class="section1_output" name="ax" type="text" readonly />
+              <input class="section1_output" name="bx" type="text" readonly />
+              <input class="section1_output" name="cx" type="text" readonly />
+              <input class="section1_output" name="dx" type="text" readonly />
             </div>
           </div>
 
-          <div class="section1_btnOrders">
-            <div class="section1_buttonsMOV">
-              <button type="btnMOV" class="section1_buttonsMOV_AX-BX">MOV AX, BX</button>
-              <button type="btnMOV" class="section1_buttonsMOV_AX-CX">MOV AX, CX</button>
-              <button type="btnMOV" class="section1_buttonsMOV_AX-DX">MOV AX, DX</button>
-              <button type="btnMOV" class="section1_buttonsMOV_BX-AX">MOV BX, AX</button>
-              <button type="btnMOV" class="section1_buttonsMOV_BX-CX">MOV BX, CX</button>
-              <button type="btnMOV" class="section1_buttonsMOV_BX-DX">MOV BX, DX</button>
-              <button type="btnMOV" class="section1_buttonsMOV_CX-AX">MOV CX, AX</button>
-              <button type="btnMOV" class="section1_buttonsMOV_CX-BX">MOV CX, BX</button>
-              <button type="btnMOV" class="section1_buttonsMOV_CX-DX">MOV CX, DX</button>
-              <button type="btnMOV" class="section1_buttonsMOV_DX-AX">MOV DX, AX</button>
-              <button type="btnMOV" class="section1_buttonsMOV_DX-BX">MOV DX, BX</button>
-              <button type="btnMOV" class="section1_buttonsMOV_DX-CX">MOV DX, CX</button>
+          <div class="section1_orders">
+            <div class="section1_from">
+              <select id="form_from">
+                <option disabled selected>- Choose -</option>
+                <option value="ax">AX</option>
+                <option value="bx">BX</option>
+                <option value="cx">CX</option>
+                <option value="dx">DX</option>
+              </select>
             </div>
 
-            <div class="section1_buttonsXCHG">
-              <button type="btnXCHG" class="section1_buttonsXCHG_AX-BX">XCHG AX, BX</button>
-              <button type="btnXCHG" class="section1_buttonsXCHG_AX-CX">XCHG AX, CX</button>
-              <button type="btnXCHG" class="section1_buttonsXCHG_AX-DX">XCHG AX, DX</button>
-              <button type="btnXCHG" class="section1_buttonsXCHG_BX-AX">XCHG BX, AX</button>
-              <button type="btnXCHG" class="section1_buttonsXCHG_BX-CX">XCHG BX, CX</button>
-              <button type="btnXCHG" class="section1_buttonsXCHG_BX-DX">XCHG BX, DX</button>
-              <button type="btnXCHG" class="section1_buttonsXCHG_CX-AX">XCHG CX, AX</button>
-              <button type="btnXCHG" class="section1_buttonsXCHG_CX-BX">XCHG CX, BX</button>
-              <button type="btnXCHG" class="section1_buttonsXCHG_CX-DX">XCHG CX, DX</button>
-              <button type="btnXCHG" class="section1_buttonsXCHG_DX-AX">XCHG DX, AX</button>
-              <button type="btnXCHG" class="section1_buttonsXCHG_DX-BX">XCHG DX, BX</button>
-              <button type="btnXCHG" class="section1_buttonsXCHG_DX-CX">XCHG DX, CX</button>
+            <p class="section1_orders_text">to</p>
+
+            <div class="section1_to">
+              <select id="form_to">
+                <option  disabled selected>- Choose -</option>
+                <option value="ax">AX</option>
+                <option value="bx">BX</option>
+                <option value="cx">CX</option>
+                <option value="dx">DX</option>
+              </select>
             </div>
           </div>
+          
+            <div class="section1_orders_btn">
+              <button class="section1_buttons_movBtn">MOV</button>
+              <button class="section1_buttons_xchgBtn">XCHG</button>
+            </div>
         </section>
 
         <section class="section2">
@@ -180,5 +182,7 @@
         </section>
       </main>
     </div>
+
   </body>
+  <script src="Main.js"></script>
 </html>
